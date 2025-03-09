@@ -1,0 +1,97 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Si : MonoBehaviour
+{
+    int h;
+    int v;
+    private void Update()
+    {
+        h = (int)gameObject.transform.position.x;
+        v = (int)gameObject.transform.position.y;
+    }
+    private void OnMouseDown()
+    {
+        Gamecontroller.ins.SetMoveLocation();
+        Gamecontroller.ins.Select = gameObject;
+        Move();
+    }
+    void Move()
+    {
+        if (gameObject.tag == "Red")
+        {
+            if (v + 1 <= 2)
+            {
+                if (h - 1 >= 3)
+                {
+                    if (Gamecontroller.ins.TableChess[h - 1, v + 1] == null || Gamecontroller.ins.TableChess[h - 1, v + 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h - 1) * 10 + (v + 1)].SetActive(true);
+                    }
+                }
+                if (h + 1 <= 5)
+                {
+                    if (Gamecontroller.ins.TableChess[h + 1, v + 1] == null || Gamecontroller.ins.TableChess[h + 1, v + 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h + 1) * 10 + (v + 1)].SetActive(true);
+                    }
+                }
+            }
+            if (v - 1 >= 0)
+            {
+                if (h - 1 >= 3)
+                {
+                    if (Gamecontroller.ins.TableChess[h - 1, v - 1] == null || Gamecontroller.ins.TableChess[h - 1, v - 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h - 1) * 10 + (v - 1)].SetActive(true);
+                    }
+                }
+                if (h + 1 <= 5)
+                {
+                    if (Gamecontroller.ins.TableChess[h + 1, v - 1] == null || Gamecontroller.ins.TableChess[h + 1, v - 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h + 1) * 10 + (v - 1)].SetActive(true);
+                    }
+                }
+            }
+        }
+        if (gameObject.tag == "Black")
+        {
+            if (v + 1 <= 9)
+            {
+                if (h - 1 >= 3)
+                {
+                    if (Gamecontroller.ins.TableChess[h - 1, v + 1] == null || Gamecontroller.ins.TableChess[h - 1, v + 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h - 1) * 10 + (v + 1)].SetActive(true);
+                    }
+                }
+                if (h + 1 <= 5)
+                {
+                    if (Gamecontroller.ins.TableChess[h + 1, v + 1] == null || Gamecontroller.ins.TableChess[h + 1, v + 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h + 1) * 10 + (v + 1)].SetActive(true);
+                    }
+                }
+            }
+            if (v - 1 >= 7)
+            {
+                if (h - 1 >= 3)
+                {
+                    if (Gamecontroller.ins.TableChess[h - 1, v - 1] == null || Gamecontroller.ins.TableChess[h - 1, v - 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h - 1) * 10 + (v - 1)].SetActive(true);
+                    }
+                }
+                if (h + 1 <= 5)
+                {
+                    if (Gamecontroller.ins.TableChess[h + 1, v - 1] == null || Gamecontroller.ins.TableChess[h + 1, v - 1].gameObject.tag != tag)
+                    {
+                        Gamecontroller.ins.MoveLocation[(h + 1) * 10 + (v - 1)].SetActive(true);
+                    }
+                }
+            }
+        }
+    }
+}
