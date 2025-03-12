@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "765466282250",
+    "project_id": "caro-chess",
+    "storage_bucket": "caro-chess.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765466282250:android:f171eb1d52fd24fcf752f3",
+        "android_client_info": {
+          "package_name": "com.iss.carochess"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2GCp7cyO6T0JkeOB8tH3Q8OA0M7XA6a0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
