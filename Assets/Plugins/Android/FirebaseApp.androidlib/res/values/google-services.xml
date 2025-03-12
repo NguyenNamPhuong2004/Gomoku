@@ -1,9 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
-  <string name="gcm_defaultSenderId" translatable="false">765466282250</string>
-  <string name="google_storage_bucket" translatable="false">caro-chess.appspot.com</string>
-  <string name="project_id" translatable="false">caro-chess</string>
-  <string name="google_api_key" translatable="false">AIzaSyC2GCp7cyO6T0JkeOB8tH3Q8OA0M7XA6a0</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC2GCp7cyO6T0JkeOB8tH3Q8OA0M7XA6a0</string>
-  <string name="google_app_id" translatable="false">1:765466282250:android:f171eb1d52fd24fcf752f3</string>
-</resources>
