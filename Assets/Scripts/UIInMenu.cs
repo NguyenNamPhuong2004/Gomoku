@@ -29,6 +29,10 @@ public class UIInMenu : MonoBehaviour
     {
         inputCode.SetActive(true);
     }
+    public void PlayWithAI()
+    {
+        SceneManager.LoadScene("Game_1_Player");
+    }
     public void Logout()
     {
         LoginController.ins.auth.SignOut();
